@@ -1,0 +1,26 @@
+<div id="meteo">Condtions meteo</div>
+<div id="meteo_pub" style="display:none">Publicite</div>
+
+<script>
+function showPub()
+{
+	var meteo = document.getElementById("meteo");
+	var meteo_pub = document.getElementById("meteo_pub");
+	meteo.style.display='none';
+	meteo_pub.style.display='block';
+	
+	setTimeout("hidePub()", 1000*5);
+}
+
+function hidePub()
+{
+	var meteo = document.getElementById("meteo");
+	var meteo_pub = document.getElementById("meteo_pub");
+	meteo_pub.style.display='none';
+	meteo.style.display='block';
+	
+	setTimeout("showPub()", 1000*10);
+}
+
+setTimeout("showPub()", 1000*10);
+</script>
